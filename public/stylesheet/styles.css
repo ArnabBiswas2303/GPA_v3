@@ -189,9 +189,7 @@ body,html{
     transform: scale(0.97);
 }
 #submit:hover{
-    cursor: pointer;
-    transition-delay: 0.07s;
-    /* transform: scale(1.007); */
+    cursor: pointer;    
 }
 #foot
 {
