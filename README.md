@@ -3,4 +3,5 @@ Its a single page app which uses the scrapped data from the SMIT's results webpa
 It calculates the GPA at real time using the scrapped results.<br>
 ## Note:  
   The Scrapper of this Gpa_Perfomance_Tracker is Developed by [Yasser Arafat](https://github.com/codedude19)
-<a href="https://imgur.com/a/lnDzCY5"><img src="https://imgur.com/a/lnDzCY5" title="source: imgur.com" /></a>
+  <br>
+  ![Imgur](https://i.imgur.com/DwiA7vR.png)
