@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Result Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheet/result.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="assets/jquery-3.3.1.min.js"></script>          
+</head>
+<body>    
+    <div id="pop-up-bg">
+            <div id="pop-up">
+                <ul>
+                    <li id="internal" onclick="hidePop(this)">Internal</li>
+                </ul>
+                <ul>
+                        <li id="semester" onclick="hidePop(this)">Semester</li>
+                </ul>
+                <ul>
+                        <li id="total" onclick="hidePop(this)">Total</li>
+                </ul>
+            </div>            
+    </div>
+    <div id = "main-form">
+        <div id = "first">
+            <p id = "name"><%=name%></p>
+        </div>
+        <div id = "second">
+                <p id = "gpa">Gpa : <%=gpa%></p>
+        </div>
+        <div id = "third">
+                <p onclick="showPop()" id = "grade"><span>Grade</span>&nbsp;&nbsp;<i class="fas fa-sort fa-1.5x"></i></p>
+        </div>
+        <!--  its-->
+        <!--  just -->
+        <!-- space -->
+        <div id="result">                                 
+        </div>        
+    </div>    
+    <footer>
+            <p>You could tap on the grade to see, internals, semester, etc</p>
+            <div><a href="/"><button id= "back">back</button></a></div>
+    </footer>
+    <script src="/assets/result.js"></script>
+</body>
+</html>

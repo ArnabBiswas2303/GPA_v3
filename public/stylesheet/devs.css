@@ -1,0 +1,247 @@
+:root{
+    background-color:#fcffff;
+    font-family: 'PT Sans', sans-serif;
+}
+#main-form{
+    background-color:#ffffff;
+    width: 380px;
+    border-radius:7px;
+    /* border: solid 1px #caeaf6; */
+    height: 345px;
+    margin: auto;
+    margin-top: 180px;
+    /* border-top: solid 40px #7bed9f; */
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.05); 
+    /* border-bottom:solid 150px #747d8c; */
+    
+}
+#welcome
+{
+    background-color: #6485FF;
+    border-radius: 7px;
+    width: 380px;
+    height: 130px;
+    position: absolute;
+    margin-top: -150px;
+    color: white;
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.1); 
+}
+#wel2
+{
+    padding-right:25px;
+    font-size: 20px;
+}
+#wel{
+    font-size: 30px;
+    font-weight: bolder;
+}
+#welcome-text
+{
+    margin-left: 20px;  
+    margin-top:10px;
+}
+#icoya
+{
+    position: absolute;
+    display: block;
+    margin-top:83px;
+    margin-left:160px;
+}
+#icoar
+{
+    position: absolute;
+    display: block;
+    margin-top:233px;
+    margin-left:160px;
+}
+#yasser > img
+{
+    border-radius: 50%;
+    box-shadow: 0px 10px 48px 0px rgba(0,0,0,0.32);
+}
+#yalabel
+{
+    display: block;
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 50px;
+    font-size: 26px;
+    color: #454555;
+}
+#alabel
+{
+    display: block;
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 200px;
+    font-size: 26px;
+    color: #454555;
+}
+#yasser
+{   position: absolute;
+    margin-top: -100px;  
+    margin-left: -110px; 
+    display: block;
+    transform: scale(0.3);
+    border:none;
+    border-radius: 50%;
+}
+#arnab > img
+{
+    border-radius:50%;
+    box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.5);
+}
+#arnab
+{
+    position: absolute;
+    margin-top: -300px;  
+    margin-left: -450px; 
+    display: block;
+    transform: scale(0.107);
+    border:none;
+}
+.git,.fa,.lik:hover
+{
+    cursor: pointer;
+}
+#back
+{
+    position: absolute;
+    width: 70px;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 3px 20px 3px rgba(0,0,0,0.05);
+    color: #ffffff;
+    background-color: #6485FF;
+    font-family: inherit;
+    margin-left: 310px;
+    margin-top: 360px;
+    user-select: none;
+    font-size: 16px;
+}
+#back:hover
+{
+    cursor: pointer;
+}
+#back:active
+{    
+    transform: scale(0.94);
+}
+#back > a{
+    text-decoration: none;
+    color: #ffffff;
+}
+@media(max-width:406px)
+{
+    #main-form
+    {
+        width: 345px;
+    }
+    #welcome
+    {
+        width: 345px;
+    }
+    #back
+    {
+        margin-left: 275px;
+    }
+    #icoar,#icoya
+    {
+        margin-left:150px;
+    }
+    #yalabel,#alabel
+    {
+        margin-left: 160px;
+    }
+    #yasser
+    {
+        margin-left: -120px;
+    }
+    #arnab
+    {
+        margin-left: -460px;
+    }
+
+}
+@media(max-width:360px)
+{
+    #main-form
+    {
+        width: 320px;
+    }
+    #welcome
+    {
+        width: 320px;
+    }
+    #back
+    {
+        margin-left: 250px;
+    }
+    #icoar,#icoya
+    {
+        margin-left:150px;
+    }
+    #yalabel,#alabel
+    {
+        margin-left: 160px;
+    }
+    #yasser
+    {
+        margin-left: -120px;
+    }
+    #arnab
+    {
+        margin-left: -460px;
+    }
+    .git
+    {
+        transform: scale(0.80);
+    }
+    .fa,.lik
+    {
+        transform: scale(0.80);
+        margin-left:-20px;
+    }
+}
+@media(max-width:331px)
+{
+    #main-form
+    {
+        width: 300px;
+    }
+    #welcome
+    {
+        width: 300px;
+    }
+    #back
+    {
+        margin-left: 230px;
+    }
+    #icoar,#icoya
+    {
+        margin-left:130px;
+    }
+    #yalabel,#alabel
+    {
+        margin-left: 140px;
+    }
+    #yasser
+    {
+        margin-left: -130px;
+    }
+    #arnab
+    {
+        margin-left: -470px;
+    }
+    .git
+    {
+        transform: scale(0.80);
+    }
+    .fa,.lik
+    {
+        transform: scale(0.80);
+        margin-left:-20px;
+    }
+}
