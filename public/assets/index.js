@@ -11,6 +11,12 @@ function hideSem(){
 let tinput = document.querySelector('.tinput');
 function validateMyForm()
 {    
+    $body = $("body");
+
+    $(document).on({
+        ajaxStart: function() { $body.addClass("loading");},
+        ajaxStop: function() { $body.removeClass("loading");}    
+    });
     let bool = true;
     $.ajax({
         type: "POST",

@@ -54,7 +54,9 @@ app.get('/data', (req, res) => {
 app.get('/result', (req, res) => {
 	let gpa = cal(gradeNum, result);
 	if(gpa["3"] == "0")
-		gpa = gpa.slice(0,3);	
+		gpa = gpa.slice(0,3);
+	if( gpa == "10.")
+		gpa = gpa.slice(0,2);	
 	if(name){
 		let nameStr = '';
 		let nameArr = name.split(' ');
