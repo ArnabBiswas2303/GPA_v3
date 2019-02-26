@@ -76,6 +76,7 @@
     #main-form
     {
         width:345px;
+        margin-top: 120px;
     }
     #first
     {
@@ -91,13 +92,16 @@
     }
     footer
     {
-        max-width: 300px;
+        max-width: 280px;
+        padding: 0!important;
     }
     footer > p{        
         max-width: 280px;
+        padding: 10px 0 !important;
     }   
     footer > div{        
         max-width: 280px;
+        padding-bottom: 10px;
     }      
 }
 @media(max-width:350px)
@@ -157,7 +161,7 @@ footer{
     width: 370px;
     padding: 10px;
     margin: 0 auto;
-    box-sizing: border-box;
+    display: block;
 }
 footer > p{
     padding: 10px;
