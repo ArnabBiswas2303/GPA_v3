@@ -15,6 +15,7 @@
 }
 #first
 {   
+    background-color:#ffffff;
     margin-top:-110px;
     border-radius:7px;
     width: 380px;
@@ -54,6 +55,7 @@
 }
 #second
 {   
+    background-color:#ffffff;
     margin-top:-55px;
     border-radius:7px;
     width: 180px;
@@ -63,6 +65,7 @@
 }
 #third
 {   
+    background-color:#ffffff;
     margin-left: 200px;
     margin-top:-55px;
     border-radius:7px;
