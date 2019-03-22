@@ -18,15 +18,11 @@
 
 /* When the body has the loading class, we turn
    the scrollbar off with overflow:hidden */
-body.loading .modal {
-    overflow: hidden;   
+body.loading .modal{
+    overflow: hidden;  
+    display: block; 
 }
 
-/* Anytime the body has the loading class, our
-   modal element will be visible */
-body.loading .modal {
-    display: block;
-}
 body,html{
     margin: 0;
     padding: 0;
