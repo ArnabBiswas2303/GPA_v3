@@ -47,7 +47,12 @@
     position: relative;
     font-size:20px;
     text-align: center;
-    margin-top: 6px;    
+    margin-top: 6px;
+    cursor: pointer;    
+}
+#grade:active
+{
+    transform: scale(0.8);
 }
 #grade > span 
 {
