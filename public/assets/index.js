@@ -11,8 +11,8 @@ function hideSem(){
 let tinput = document.querySelector('.tinput');
 function validateMyForm()
 {    
-    $body = $("body");
-    $body.addClass("loading");      
+    $modal = $(".modal");
+    $modal.css("display","block");      
     let bool = true;
     $.ajax({
         type: "POST",
@@ -23,7 +23,7 @@ function validateMyForm()
             semester:exam.textContent,
         },                
         }).done(function(data){
-            $body.removeClass("loading");
+            $modal.css("display","none");      
 		    if(data == "undefined"){
                 bool = false;
                 tinput.value = '';
