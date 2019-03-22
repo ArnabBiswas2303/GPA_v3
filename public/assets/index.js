@@ -12,11 +12,7 @@ let tinput = document.querySelector('.tinput');
 function validateMyForm()
 {    
     $body = $("body");
-
-    $(document).on({
-        ajaxStart: function() { $body.addClass("loading");},
-        ajaxStop: function() { $body.removeClass("loading");}    
-    });
+    $body.addClass("loading");      
     let bool = true;
     $.ajax({
         type: "POST",
@@ -27,6 +23,7 @@ function validateMyForm()
             semester:exam.textContent,
         },                
         }).done(function(data){
+            $body.removeClass("loading");
 		    if(data == "undefined"){
                 bool = false;
                 tinput.value = '';
