@@ -1,6 +1,6 @@
 let popUp = document.getElementById("pop-up-bg");
 let exam = document.getElementById("exam");
-let modal = document.getElementsByClassName("modal");
+let modal = document.querySelector(".modal");
 function showSem(){
     popUp.style.display = "block"
 }
@@ -12,7 +12,7 @@ function hideSem(){
 let tinput = document.querySelector('.tinput');
 function validateMyForm()
 {        
-    popUp.style.display = "block";
+    modal.style.display = "block";
     let bool = true;
     $.ajax({
         type: "POST",
@@ -23,7 +23,7 @@ function validateMyForm()
             semester:exam.textContent,
         },                
         }).done(function(data){
-            popUp.style.display = "display";      
+            modal.style.display = "none";      
 		    if(data == "undefined"){
                 bool = false;
                 tinput.value = '';
