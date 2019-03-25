@@ -2,17 +2,16 @@
     background-color:#FAF7F7;
     font-family: 'PT Sans', sans-serif;
 }
-.modal {
-    position:   fixed;
-    z-index:    1000;
-    top:        0;
-    left:       0;
-    height:     100%;
-    width:      100%;
-    background: rgba( 255, 255, 255, .8 ) 
-                url('/img/ajax-loader.gif') 
-                50% 50% 
-                no-repeat;
+
+.spinnermodal {
+    background-color: #FFFFFF;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
 }
 
 body,html{

@@ -50,7 +50,11 @@
         
     </div>    
 </form>
-<div class="modal" style="display: none"></div>    
+<div class="spinnermodal" id="progressbar" style="display: none; z-index: 10001">
+    <div style="position: fixed; z-index: 10001; top: 50%; left: 50%; height:65px">
+        <img src="/img/ajax-loader.gif" alt="Loading..." />
+      </div>
+  </div>
 <script src="assets/index.js"></script>
 </body>
 </html>
