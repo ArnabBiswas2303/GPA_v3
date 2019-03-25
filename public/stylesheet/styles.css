@@ -247,6 +247,10 @@ body,html{
 }
 @media (max-width:406px)
 {
+    .spinnermodal > div {
+        left: 47% !important;
+    }
+
     #main-form
     {
         width: 330px;
