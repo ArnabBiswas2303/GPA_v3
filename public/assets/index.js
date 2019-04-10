@@ -3,6 +3,9 @@ let exam = document.getElementById("exam");
 function showSem(){
     popUp.style.display = "block"
 }
+function closePopUp(){
+    popUp.style.display = "none";
+}
 function hideSem(){
     exam.textContent = document.getElementById("Nov-Dec-2018").textContent;
     popUp.style.display = "none"
