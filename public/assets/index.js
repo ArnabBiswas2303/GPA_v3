@@ -6,8 +6,8 @@ function showSem(){
 function closePopUp(){
     popUp.style.display = "none";
 }
-function hideSem(){
-    exam.textContent = document.getElementById("Nov-Dec-2018").textContent;
+function hideSem(name){
+    exam.textContent = document.getElementById(name).textContent;
     popUp.style.display = "none"
     document.getElementById("hidden-input").value = exam.textContent;
 }
