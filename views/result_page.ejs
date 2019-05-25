@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">  
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script src="assets/jquery-3.3.1.min.js"></script>          
+    <script src="assets/jquery-3.3.1.min.js"></script>    
 </head>
-<body>    
+<body>        
     <div id="pop-up-bg">
             <div id="pop-up">
                 <ul>
@@ -27,7 +27,7 @@
             </div>            
     </div>
     <div id = "main-form">
-        <div id = "first">
+        <div id = "first">            
             <p id = "name"><%=name%></p>
         </div>
         <div id = "second">
@@ -46,6 +46,11 @@
             <p>You could tap on the grade to see, internals, semester, etc</p>
             <div><a href="/"><button id= "back">back</button></a></div>
     </footer>
-    <script src="/assets/result.js"></script>
+    <script src="/assets/result.js"></script>  
+    <script>        
+        var x = "<%=sresult%>";
+        x=x.replace(/&#34;/gm,'"');                            
+        var result = JSON.parse(x);
+    </script>  
 </body>
 </html>

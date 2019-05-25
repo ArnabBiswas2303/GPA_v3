@@ -21,28 +21,20 @@ function hideLoader() {
         $("#progressbar").css("display", "none");
     }, 1000);
 }
-function validateMyForm()
+async function validateMyForm ()
 {   
     console.log(tinput.value);         
     let bool = true;
-    $.ajax({
+    let promise = $.ajax({
         type: "POST",
         url: "/",
-        async: false,        
+        async: true,        
         beforeSend: function () { showLoader(); },
         success: function () { hideLoader(); },
         data:{ 
             username:tinput.value,
             semester:exam.textContent,
-        },                
-        }).done(function(data){     
-		    if(data == "undefined"){
-                bool = false;
-                tinput.value = '';
-                alert("Invalid Registration Number!");
-            }else{
-                bool = true;
-            }
-        });
+        }                
+        })
     return bool; 
 }

@@ -6,8 +6,6 @@ let bodyParser = require('body-parser');
 let cal = require('./public/assets/cal');
 let port = process.env.PORT || 8080;
 
-let semester,resultObj,objResult,nameObj,objNames,regNum,result,name;
-
 let gradeNum = {
 		"S" : 10,
 		"A" : 9,
@@ -31,46 +29,39 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {		
+	let semester, resultObj, objResult, nameObj, objNames, regNum, result,name;
 	semester = req.body.semester;
 	resultObj = fs.readFileSync(semester+'.json');
 	objResult = JSON.parse(resultObj);
 	regNum = req.body.username;	
-	result = objResult[regNum];	
+	result = objResult[regNum];		
 	if(result){		
 		nameObj = fs.readFileSync('Names.json');	
 		objNames = JSON.parse(nameObj);	
-		name = objNames[regNum];
-		res.redirect('/result');
+		name = objNames[regNum];		
+		let gpa = cal(gradeNum, result);
+		if (gpa["3"] == "0")
+			gpa = gpa.slice(0, 3);
+		if (gpa == "10.")
+			gpa = gpa.slice(0, 2);
+		if (name) {
+			let nameStr = '';
+			let nameArr = name.split(' ');
+			if (nameArr[1] == undefined) {
+				nameStr = nameArr[0];
+			} else {
+				nameStr = nameArr[0] + " " + nameArr[1]
+			}
+			regNum = nameStr;
+
+		} else {
+			regNum = regNum;
+		}				
+		res.render('result_page.ejs', { gpa: gpa, name: regNum, sresult: JSON.stringify(result)});
 	}
 	else {
-		res.send('undefined');
+		res.redirect('/');
 	}
-});
-
-app.get('/data', (req, res) => {
-	res.json({result: result});
-});
-
-app.get('/result', (req, res) => {
-	let gpa = cal(gradeNum, result);
-	if(gpa["3"] == "0")
-		gpa = gpa.slice(0,3);
-	if( gpa == "10.")
-		gpa = gpa.slice(0,2);	
-	if(name){
-		let nameStr = '';
-		let nameArr = name.split(' ');
-		if(nameArr[1] == undefined){
-			nameStr = nameArr[0];						
-		} else {
-			nameStr = nameArr[0] + " " + nameArr[1]
-		}
-		regNum = nameStr;
-		
-	}else{
-		regNum = regNum;
-	}
-	res.render('result_page.ejs',{gpa : gpa, name: regNum});
 });
 
 app.get('/dev', (req, res) => {

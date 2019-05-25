@@ -2,20 +2,8 @@ let popUp = document.getElementById("pop-up-bg");
 let span = document.querySelector("#grade span");
 let sub;
 $(document).ready(function(){    
-    (function req(){	
-        axios({
-          method: 'get',
-          url: '/data',          
-        })
-        .then(function(res){        
-            sub = res.data.result;
-            addGrid(sub);
-        })
-        .catch(function(err){            
-            console.log(err);
-        })
-    })();
-    
+    sub = result;
+    addGrid(sub);
     function addGrid(sub){
         let count = 1;        
         for(let key in sub){        
@@ -47,8 +35,7 @@ function hidePop(ele){
     }
     let count = 1;    
     for(let key in sub){                
-        $(`.${count}>div:nth-child(2n)`).text(`${sub[key][i]}`)  
-        // $(`.${count}>div:nth-child(2n)`).css("opacity", "0");
+        $(`.${count}>div:nth-child(2n)`).text(`${sub[key][i]}`)  ;
         count++;
     }        
     span.textContent = $(ele).text();
@@ -59,6 +46,3 @@ function hidePop(ele){
     </ul>`);    
     $(`.row>div:nth-child(2n)`).addClass('animate');
 }
-function changeTableContent(){
-
-} 
