@@ -22,8 +22,7 @@ function hideLoader() {
     }, 1000);
 }
 async function validateMyForm ()
-{   
-    console.log(tinput.value);         
+{                
     let bool = true;
     let promise = $.ajax({
         type: "POST",
