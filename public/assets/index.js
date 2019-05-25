@@ -22,7 +22,8 @@ function hideLoader() {
     }, 1000);
 }
 function validateMyForm()
-{            
+{   
+    console.log(tinput.value);         
     let bool = true;
     $.ajax({
         type: "POST",
