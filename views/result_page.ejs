@@ -49,7 +49,7 @@
     <script src="/assets/result.js"></script>  
     <script>        
         var x = "<%=sresult%>";
-        x=x.replace(/&#34;/gm,'"');                            
+        x=x.replace(/&#34;/gm,'"').replace(/&amp;/gm,' ');                            
         var result = JSON.parse(x);
     </script>  
 </body>
