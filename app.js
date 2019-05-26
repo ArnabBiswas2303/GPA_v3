@@ -62,7 +62,7 @@ app.post('/', (req, res) => {
 		res.render('result_page.ejs', { gpa: gpa, name: regNum, sresult: JSON.stringify(result)});
 	}
 	else {		
-		res.redirect(404,'/');
+		res.status(404).send('Invalid Registration Number');
 	}
 });
 

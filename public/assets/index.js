@@ -36,10 +36,12 @@ async function validateMyForm ()
         },
         statusCode: {
             404: function () {
-                alert("Invalid Registration Number");
-                location.reload(true);
+                alert("Invalid Registration Number");   
+                location.reload(true);             
             }
         }                
-    }).done()
+    }).done(function(data){
+        console.log(data);
+    });
     return bool; 
 }
