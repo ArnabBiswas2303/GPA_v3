@@ -17,7 +17,9 @@ let gradeNum = {
 		"P" : 0,
 		"I" : 0,
 		"MP": 0,
-		"DT": 0
+		"DT": 0,
+		"PASS": 1,
+		"FAIL": 0
 	}
 
 app.use(express.static(__dirname + '/public'));
