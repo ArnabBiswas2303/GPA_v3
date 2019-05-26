@@ -29,7 +29,7 @@ function validateMyForm ()
         url: "/",
         async: true,        
         beforeSend: function () { showLoader(); },
-        success: function () { hideLoader(); },
+        success: function () { hideLoader();},
         data:{ 
             username:tinput.value,
             semester:exam.textContent,
