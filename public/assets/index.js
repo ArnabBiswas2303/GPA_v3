@@ -21,7 +21,7 @@ function hideLoader() {
         $("#progressbar").css("display", "none");
     }, 1000);
 }
-async function validateMyForm ()
+function validateMyForm ()
 {                
     let bool = true;
     $.ajax({
@@ -40,8 +40,6 @@ async function validateMyForm ()
                 location.reload(true);             
             }
         }                
-    }).done(function(data){
-        console.log(data);
-    });
+    })
     return bool; 
 }
