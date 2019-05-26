@@ -24,7 +24,7 @@ function hideLoader() {
 async function validateMyForm ()
 {                
     let bool = true;
-    let promise = $.ajax({
+    $.ajax({
         type: "POST",
         url: "/",
         async: true,        
@@ -33,7 +33,13 @@ async function validateMyForm ()
         data:{ 
             username:tinput.value,
             semester:exam.textContent,
+        },
+        statusCode: {
+            404: function () {
+                alert("Invalid Registration Number");
+                location.reload(true);
+            }
         }                
-        })
+    }).done()
     return bool; 
 }

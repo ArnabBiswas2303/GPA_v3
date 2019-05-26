@@ -61,8 +61,8 @@ app.post('/', (req, res) => {
 		}				
 		res.render('result_page.ejs', { gpa: gpa, name: regNum, sresult: JSON.stringify(result)});
 	}
-	else {
-		res.redirect('/');
+	else {		
+		res.status(404).send();
 	}
 });
 
