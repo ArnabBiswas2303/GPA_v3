@@ -1,3 +1,5 @@
+<!-- Author: Arnab Biswas
+College: Sikkim Manipal Institute Of Technology -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,14 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Result Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="/stylesheet/result.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">  
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="assets/jquery-3.3.1.min.js"></script>    
 </head>
-<body>        
+<body>
+
+    <!-- POPUP -->
     <div id="pop-up-bg">
             <div id="pop-up">
                 <ul>
@@ -26,6 +32,8 @@
                 </ul>
             </div>            
     </div>
+
+    <!-- MAIN RESULT -->
     <div id = "main-form">
         <div id = "first">            
             <p id = "name"><%=name%></p>
@@ -39,10 +47,15 @@
         <!--  its-->
         <!--  just -->
         <!-- space -->
-        <div id="result">                                 
-        </div>        
+        <div id="result">
+        </div>
     </div>    
+
+    <!-- FOOTER -->
     <footer>
+        <div id="cgpa">
+            <p id="cgpaVal">CGPA : <%=cgpa%></p>
+        </div>
             <p>You could tap on the grade to see, internals, semester, etc</p>
             <div><a href="/"><button id= "back">back</button></a></div>
     </footer>

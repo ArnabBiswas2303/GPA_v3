@@ -23,6 +23,20 @@
     position: absolute;
     box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.07); 
 }
+#cgpa{   
+    background-color: #ffffff;
+    border-radius:7px;
+    width: 380px;
+    height: 40px;
+    position: absolute;
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.07); 
+}
+#cgpaVal{
+    line-height: 0.1;
+    text-align: center;
+    font-size: 20px;
+    font-family: "PT Sans", sans-serif;
+}
 #name
 {
     display: block;
@@ -105,14 +119,27 @@
     {
         margin-left: 180px;
     }
-    footer
-    {
-        max-width: 280px;
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: 170px;
+        width: 345px !important;
         padding: 0!important;
     }
+    #cgpa{
+        min-width: 345px;
+        position: relative;
+        margin-top: 15px;
+    }
+    #cgpaVal{
+        height: 100%;
+        line-height: 2.5;
+        margin: 0;
+    }
     footer > p{        
-        max-width: 280px;
-        padding: 10px 0 !important;
+        max-width: 330px;
+        margin: 10px 0 0 0 !important;
+        padding: 10px 0px 10px 20px !important;
     }   
     footer > div{        
         max-width: 280px;
@@ -121,6 +148,16 @@
 }
 @media(max-width:350px)
 {
+    #cgpa{
+        min-width: 300px !important;
+    }
+    footer{
+        max-width: 300px;
+    }
+    footer > p{
+        max-width: 290px !important;
+        padding: 10px 0px 10px 10px !important;
+    }
     #main-form
     {
         width:300px;
@@ -173,9 +210,9 @@
 }
 /* FOOTER */
 footer{
-    width: 370px;
+    width: 380px;
     padding: 10px;
-    margin: 0 auto;
+    margin: 5px auto;
     display: block;
 }
 footer > p{
@@ -185,7 +222,7 @@ footer > p{
     letter-spacing: 0.7px;
     font-size: 1.35em; 
     font-family: 'PT Sans Narrow', sans-serif;
-    margin: 0 auto;
+    margin: 50px auto 0;
 }
 footer > div{
     width: 350px;

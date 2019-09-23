@@ -1,3 +1,5 @@
+<!-- Author: Arnab Biswas
+College: Sikkim Manipal Institute Of Technology -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -12,57 +14,63 @@
 <meta name="application-name" content="SMIT Tracker">
 <meta name="msapplication-TileColor" content="#603cba">
 <meta name="theme-color" content="#ffffff">
+<!-- CSS -->
 <link rel="stylesheet" href="/stylesheet/styles.css">
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<!-- Fontawesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <script src="assets/jquery-3.3.1.min.js"></script>   
 <title>SMIT Perfomance Tracker</title>
 </head>
 <body>
-<div onclick="closePopUp()" id="pop-up-bg">
-        <div id="pop-up">
-            <ul>
-                <li id="April-May-2019" onclick="hideSem('April-May-2019')" value="April-May-2019">April-May-2019</li>
-                <li id="Nov-Dec-2018" onclick="hideSem('Nov-Dec-2018')" value="Nov-Dec-2018">Nov-Dec-2018</li>
-                <li id="April-May-2018" onclick="hideSem('April-May-2018')" value="April-May-2018">April-May-2018</li>
-                <li id="Nov-Dec-2017" onclick="hideSem('Nov-Dec-2017')" value="Nov-Dec-2017">Nov-Dec-2017</li>
-                <li id="May-June-2017" onclick="hideSem('May-June-2017')" value="May-June-2017">May-June-2017</li>
-                <li id="Nov-Dec-2016" onclick="hideSem('Nov-Dec-2016')" value="Nov-Dec-2016">Nov-Dec-2016</li>
-                <li id="May-June-2016" onclick="hideSem('May-June-2016')" value="May-June-2016">May-June-2016</li>
-                <li id="Nov-Dec-2015" onclick="hideSem('Nov-Dec-2015')" value="Nov-Dec-2015">Nov-Dec-2015</li>                
-                <li id="May-June-2015" onclick="hideSem('May-June-2015')" value="May-June-2015">May-June-2015</li>                
-            </ul>
-</div>
-        
-</div>
-<form onsubmit="return validateMyForm()" action="/" method="POST" id = "main-form">
-    <div id = "welcome">
-        <div id = "welcome-text">
-            <span id = "wel">Welcome,</span></br>
-            <span id = "wel2">Enter Registration number to continue!</span>  
+    <!-- SEM POPUP -->
+    <div onclick="closePopUp()" id="pop-up-bg">
+            <div id="pop-up">
+                <ul>
+                    <li id="April-May-2019" onclick="hideSem('April-May-2019')" value="April-May-2019">April-May-2019</li>
+                    <li id="Nov-Dec-2018" onclick="hideSem('Nov-Dec-2018')" value="Nov-Dec-2018">Nov-Dec-2018</li>
+                    <li id="April-May-2018" onclick="hideSem('April-May-2018')" value="April-May-2018">April-May-2018</li>
+                    <li id="Nov-Dec-2017" onclick="hideSem('Nov-Dec-2017')" value="Nov-Dec-2017">Nov-Dec-2017</li>
+                    <li id="May-June-2017" onclick="hideSem('May-June-2017')" value="May-June-2017">May-June-2017</li>
+                    <li id="Nov-Dec-2016" onclick="hideSem('Nov-Dec-2016')" value="Nov-Dec-2016">Nov-Dec-2016</li>
+                    <li id="May-June-2016" onclick="hideSem('May-June-2016')" value="May-June-2016">May-June-2016</li>
+                    <li id="Nov-Dec-2015" onclick="hideSem('Nov-Dec-2015')" value="Nov-Dec-2015">Nov-Dec-2015</li>                
+                    <li id="May-June-2015" onclick="hideSem('May-June-2015')" value="May-June-2015">May-June-2015</li>                
+                </ul>
+            </div>
+    </div>
+
+    <!-- FORM -->
+    <form onsubmit="return validateMyForm()" action="/" method="POST" id = "main-form">
+        <div id = "welcome">
+            <div id = "welcome-text">
+                <span id = "wel">Welcome,</span></br>
+                <span id = "wel2">Enter Registration number to continue!</span>  
+            </div>
+        </div>
+        <label id="smit"><span id = "name">SMIT</span></br><span id = "pfm">Perfomance Tracker</span></label>
+        <label id= "reg">Enter Reg-no :</label>
+        <input type="text" name="username" id="username" class = "tinput">
+        <input id="hidden-input" type="hidden" name="semester" value="April-May-2019">
+        <button type="button" onclick="showSem()" id = "sem" title="Semester"><span id = "semester">Semester&nbsp;&nbsp;<i class="fas fa-sort fa-1.5x"></i></span></button>
+        <label name="semester" for="sem" id="exam">April-May-2019</label>
+        <button type="submit" id="submit">Sign in</button>
+        <div id = "foot">
+            <div id = "dev1">
+                <p id = "dev2">Wanna know the developers?</p>
+                <p class = "creators"><a href="/dev" class="creators">@Creators</a></p>
+            </div>
+            
+        </div>    
+    </form>
+    <!-- SPINNER -->
+    <div class="spinnermodal" id="progressbar" style="display: none; z-index: 10001">
+        <div style="position: fixed; z-index: 10001; top: 50%; left: 50%; height:65px">
+            <img src="/img/ajax-loader.gif" alt="Loading..." />
         </div>
     </div>
-    <label id="smit"><span id = "name">SMIT</span></br><span id = "pfm">Perfomance Tracker</span></label>
-    <label id= "reg">Enter Reg-no :</label>
-    <input type="text" name="username" id="username" class = "tinput">
-    <input id="hidden-input" type="hidden" name="semester" value="April-May-2019">
-    <button type="button" onclick="showSem()" id = "sem" title="Semester"><span id = "semester">Semester&nbsp;&nbsp;<i class="fas fa-sort fa-1.5x"></i></span></button>
-    <label name="semester" for="sem" id="exam">April-May-2019</label>
-    <button type="submit" id="submit">Sign in</button>
-    <div id = "foot">
-        <div id = "dev1">
-            <p id = "dev2">Wanna know the developers?</p>
-            <p class = "creators"><a href="/dev" class="creators">@Creators</a></p>
-        </div>
-        
-    </div>    
-</form>
-<div class="spinnermodal" id="progressbar" style="display: none; z-index: 10001">
-    <div style="position: fixed; z-index: 10001; top: 50%; left: 50%; height:65px">
-        <img src="/img/ajax-loader.gif" alt="Loading..." />
-      </div>
-  </div>
-<script src="assets/index.js"></script>
+    <script src="assets/index.js"></script>
 </body>
 </html>

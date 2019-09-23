@@ -31,16 +31,17 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {		
-	let semester, resultObj, objResult, nameObj, objNames, regNum, result,name;
+	let semester, resultObj, objResult, cgpaObj, regNum, result, name, cgpaFile, cgpa;
 	semester = req.body.semester;
 	resultObj = fs.readFileSync(semester+'.json');
 	objResult = JSON.parse(resultObj);
 	regNum = req.body.username;	
 	result = objResult[regNum];		
 	if(result){		
-		nameObj = fs.readFileSync('Names.json');	
-		objNames = JSON.parse(nameObj);	
-		name = objNames[regNum];		
+		cgpaFile = fs.readFileSync('CGPA.json');	
+		cgpaObj = JSON.parse(cgpaFile);	
+		name = cgpaObj[regNum][0];		
+		cgpa = cgpaObj[regNum][1];
 		let gpa = cal(gradeNum, result);
 		if (gpa["3"] == "0")
 			gpa = gpa.slice(0, 3);
@@ -59,7 +60,7 @@ app.post('/', (req, res) => {
 		} else {
 			regNum = regNum;
 		}				
-		res.render('result_page.ejs', { gpa: gpa, name: regNum, sresult: JSON.stringify(result)});
+		res.render('result_page.ejs', { gpa: gpa, name: regNum, sresult: JSON.stringify(result), cgpa: cgpa });
 	}
 	else {		
 		res.redirect('/');
